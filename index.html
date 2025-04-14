@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+	<title>BMI Calculator</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Darumadrop+One&family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Parkinsans:wght@300..800&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
+<style>
+
+.jost-<normal> {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.jost-<bold> {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+body{
+	font-family: "Jost", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	background-image: url(https://img.freepik.com/free-vector/blank-white-notepaper-design-vector_53876-161343.jpg?t=st=1737375810~exp=1737379410~hmac=5e36af2001078ae7e408c3fd4a6940e38d1f20b5a8cb201eda545a8147b1ad71&w=1480);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+h1{
+	text-align: center;
+	text-shadow: 0px 0px 6px rgba(0, 0, 0, .3);
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+	background-color: #779ba8;
+	padding-block: 4px;
+	color: white;
+}
+form{
+	padding: 30px;
+}
+
+p{
+	color: gray;
+}
+
+details{
+	color: gray;
+}
+</style>
+
+</head>
+<body>
+<center>
+<br>
+<h1>BMI calcu-wow!</h1>
+<br>
+	<form class="col-md-4">
+		<details ontoggle="message()">
+			<summary>Instructions</summary>
+				<i>Enter your weight and height in the specified areas to get your BMI (Body Mass Index).</i>
+		</details>
+		<br>
+
+	<input type="text" class="form-control" id="w">
+	<kbd id="">weight (in kg)</kbd>
+
+	<br><br>
+
+	<input type="text" class="form-control" id="h">
+	<kbd id="">height (in meters)</kbd>
+
+	<br><br>
+
+	<button type="button" class="btn btn-dark" onclick="calcu()">Calculate</button>
+	
+
+	<br><br><br><br><br><br>
+	<hr>
+
+	<a href="https://docs.google.com/document/d/1uzhSNBCdcruoQ75C6IsGJikyyBhETwnz3ZygMnPxbeI/edit?tab=t.0">
+		<p>
+			! references !
+		</p>
+	</a>
+	</form>
+</center>
+
+	<script>
+		function calcu(){
+			var w = document.getElementById("w").value; //weight
+			var h = document.getElementById("h").value; //height
+			var Hbmi = h ** 2;
+			var bmi = Number(w) / Number(Hbmi); //dividing weight over the value of height squared
+			var bmi = bmi.toFixed(2); //rounds off to 2 decimals
+
+			if (bmi < 18.5){
+				alert("BMI: " + bmi + " = Underweight");
+			}
+			else if (bmi >= 18.5 && bmi <= 24.9){
+				alert("BMI: " + bmi + " = Normal");
+			}
+			else if (bmi >= 25 && bmi <= 29.9){
+				alert("BMI: " + bmi + " = Overweight");
+			}else{
+				alert("BMI: " + bmi + " = Obese");
+			}
+		}
+	</script>
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
